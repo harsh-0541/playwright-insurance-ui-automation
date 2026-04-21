@@ -1,0 +1,21 @@
+{
+  "name": "playwright-insurance-ui-automation",
+  "version": "1.0.0",
+  "description": "End-to-end UI & API automation framework for insurance domain using Playwright + TypeScript",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:headed": "npx playwright test --headed",
+    "test:parallel": "npx playwright test --workers=4",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "report:html": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "typescript": "^5.4.5",
+    "allure-playwright": "^3.0.0",
+    "allure-commandline": "^2.29.0"
+  }
+}
