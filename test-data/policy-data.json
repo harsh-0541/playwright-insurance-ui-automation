@@ -1,0 +1,23 @@
+{
+  "healthPolicy": {
+    "type": "Health",
+    "holderName": "John Test User",
+    "startDate": "2025-01-01",
+    "endDate": "2025-12-31",
+    "premium": "5000"
+  },
+  "autoPolicy": {
+    "type": "Auto",
+    "holderName": "Jane Test User",
+    "startDate": "2025-02-01",
+    "endDate": "2026-01-31",
+    "premium": "8000"
+  },
+  "lifePolicy": {
+    "type": "Life",
+    "holderName": "Test Holder",
+    "startDate": "2025-01-01",
+    "endDate": "2030-12-31",
+    "premium": "12000"
+  }
+}
