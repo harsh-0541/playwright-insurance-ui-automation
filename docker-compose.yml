@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    build: .
+    container_name: playwright-insurance-tests
+    environment:
+      - BASE_URL=${BASE_URL:-https://your-insurance-app.com}
+      - TEST_USERNAME=${TEST_USERNAME:-testuser@insurance.com}
+      - TEST_PASSWORD=${TEST_PASSWORD:-TestPass@123}
+      - CI=true
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./allure-results:/app/allure-results
+      - ./test-results:/app/test-results
+    command: npx playwright test --workers=4
+
+  playwright-smoke:
+    build: .
+    container_name: playwright-smoke-tests
+    environment:
+      - BASE_URL=${BASE_URL:-https://your-insurance-app.com}
+      - CI=true
+    command: npx playwright test --grep @smoke --workers=2
