@@ -36,3 +36,24 @@ test.describe('Authentication Tests', () => {
     await expect(page.getByText('Password is required')).toBeVisible();
   });
 });
+test('Session persists after page refresh', async ({ page }) => {
+    await loginPage.login(
+      process.env.TEST_USERNAME || 'testuser@insurance.com',
+      process.env.TEST_PASSWORD || 'TestPass@123'
+    );
+    await expect(page).toHaveURL(/dashboard/);
+    await page.reload();
+    // After reload user should still be on dashboard
+    await expect(page).toHaveURL(/dashboard/);
+    await expect(page.getByText('Welcome')).toBeVisible();
+  });
+
+  test('Login button is disabled during authentication', async ({ page }) => {
+    await loginPage.login(
+      process.env.TEST_USERNAME || 'testuser@insurance.com',
+      process.env.TEST_PASSWORD || 'TestPass@123'
+    );
+    // Button should be disabled while request is processing
+    // This prevents duplicate form submissions
+    await expect(loginPage.loginButton).toBeDisabled();
+  });
