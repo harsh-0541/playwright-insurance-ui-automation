@@ -19,5 +19,22 @@
     "startDate": "2025-01-01",
     "endDate": "2030-12-31",
     "premium": "12000"
+  },
+  "claims": {
+    "accidentClaim": {
+      "type": "Accident",
+      "policyNumber": "POL-2024-001",
+      "description": "Vehicle accident on highway"
+    },
+    "healthClaim": {
+      "type": "Health",
+      "policyNumber": "POL-2024-002",
+      "description": "Medical emergency hospitalization"
+    },
+    "propertyClaim": {
+      "type": "Property",
+      "policyNumber": "POL-2024-003",
+      "description": "Property damage due to flooding"
+    }
   }
 }
