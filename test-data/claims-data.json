@@ -1,0 +1,40 @@
+{
+  "validClaims": {
+    "accidentClaim": {
+      "type": "Accident",
+      "policyNumber": "POL-2024-001",
+      "description": "Vehicle accident on highway near Pune",
+      "estimatedAmount": "50000"
+    },
+    "healthClaim": {
+      "type": "Health",
+      "policyNumber": "POL-2024-002",
+      "description": "Medical emergency hospitalization for 3 days",
+      "estimatedAmount": "25000"
+    },
+    "propertyClaim": {
+      "type": "Property",
+      "policyNumber": "POL-2024-003",
+      "description": "Property damage due to flooding",
+      "estimatedAmount": "100000"
+    }
+  },
+  "invalidClaims": {
+    "missingPolicyNumber": {
+      "type": "Accident",
+      "policyNumber": "",
+      "description": "Test claim with missing policy number"
+    },
+    "invalidPolicyNumber": {
+      "type": "Health",
+      "policyNumber": "INVALID-999",
+      "description": "Test claim with invalid policy number"
+    }
+  },
+  "expectedStatuses": {
+    "newClaim": "Pending Review",
+    "approvedClaim": "Approved",
+    "rejectedClaim": "Rejected",
+    "processingClaim": "Under Processing"
+  }
+}
