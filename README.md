@@ -112,5 +112,5 @@ allure open allure-report
 
 ## 🤝 Contributors
 
-- **harsh-0541** — Sole Contributor
+- **harsh-0541** 
 ## 📊 CI/CD Pipeline
