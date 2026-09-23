@@ -107,6 +107,10 @@ allure open allure-report
 
 ## 👤 Author
 
-**Parimal Jagtap** — SDET | 4+ Years  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-parimaljagtap-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/parimaljagtap)
+**harsh-0541** — SDET | 9+ Years  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-harsh--0541-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/harsh-vardhan-singh-565a32124/)
+
+## 🤝 Contributors
+
+- **harsh-0541** — Sole Contributor
 ## 📊 CI/CD Pipeline
